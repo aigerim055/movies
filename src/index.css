@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Oxygen, sans-serif;
+}
+
+body {
+  color: white;
+  height: 100vh;
+  background: #151515;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  /*text-align: center;*/
+  /*width: 1000px !important;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+.swiper {
+  width: 100%;
+  height: 550px;
+  margin: 20px auto;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  padding: 50px 0 50px 0;
+}
+
+.nav a {
+  text-decoration: unset;
+  text-transform: uppercase;
+  font-family: cursive;
+  /*color: #000;*/
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col-4 {
+  width: 33.33%;
+  padding: 0 15px;
+}
+
+.col-8 {
+  width: 66.66%;
+  padding: 0 15px;
+}
+
+
+
+
+.poster img:hover {
+  box-shadow: 1px 1px 45px 0px rgba(93,131,193,0.75);
+
+}
+
+.img:hover {
+  box-shadow: 1px 1px 45px 0px rgba(93,131,193,0.75);
+}
+
+
+
+.title {
+  color: #fff;
+  font-family: "Nimbus Roman", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.genres {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.genres p {
+  background-color: rgba(32,45,45,0.37);
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.desc {
+  font-size: 18px;
+  width: 95%;
+  padding: 20px  0;
+  line-height: 30px;
+}
+
+.col-9 {
+  width: 75%;
+  padding: 0 15px;
+}
+
+.col-3 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.custom-btn {
+  background: linear-gradient(45deg, #0561ee, #9A5BFF);
+  padding: 15px 40px;
+  border-radius: 15px;
+  border: none;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background: black;
+  color: #9A5BFF;
+}
+
+.top-title{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.sidebar-title a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}

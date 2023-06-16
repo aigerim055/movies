@@ -47,7 +47,7 @@ export default function MainSwiper() {
 				>
 					{
 						movies.map(movie => (
-							<SwiperSlide>
+							<SwiperSlide key={movie.id}>
 									<CardSwiper movie={movie}/>
 							</SwiperSlide>
 						))

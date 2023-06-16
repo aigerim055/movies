@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const TopRatedMovies = () => {
 	
 	const [movies, setMovies] = useState({})
 	const [loading, setLoading] = useState(true)
-	
+	const navigate = useNavigate()
 	
 	useEffect(() => {
 		axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=2b45247853b02c34d915443548d8a9b5')
@@ -17,6 +17,10 @@ const TopRatedMovies = () => {
 				setLoading(false)
 			})
 	}, [])
+	
+	const handleClick = (movie) => {
+		navigate(`/movie/${movie.id}`)
+	}
 	
 	return (
 		<div>
@@ -33,17 +37,20 @@ const TopRatedMovies = () => {
 			<div className="row">
 				{   loading ? <span>loading...</span>:
 					movies.slice(0, 12).map(movie => (
-						<div className={'col-3'}>
-							<Link to={`/movie/${movie.id}`}>
+						<div key={movie.id} className={'col-3'}>
+							<div className="box card">
 								<img
+									onClick={() => handleClick(movie)}
 									className={'img'}
 									style={{
 										width: '100%',
 										borderRadius: '30px',
-										marginBottom: '30px'
+										height: '100%'
 									}}
-									src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt=""/>
-							</Link>
+									src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+									alt=""
+								/>
+							</div>
 						</div>
 					))
 					

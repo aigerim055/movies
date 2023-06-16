@@ -61,6 +61,7 @@ const SideBar = () => {
 											 padding: '10px',
 										     textAlign: 'center',
 										}}
+									     key={movie.id}
 									>
 										<img
 											style={{

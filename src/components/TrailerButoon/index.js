@@ -10,7 +10,7 @@ const TrailerButton = (props) => {
 	useEffect(() => {
 		axios.get(`https://api.themoviedb.org/3/movie/${props.id}/videos?api_key=2b45247853b02c34d915443548d8a9b5`)
 			.then(({data}) => {
-				setKey(data.results.filter(el => el.type === 'Trailer')[0].key || '')
+				setKey(data.results.find(el => el.type === 'Trailer').key)
 			})
 			.finally(() => {
 				setLoading(false)

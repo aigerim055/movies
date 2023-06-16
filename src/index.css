@@ -166,3 +166,25 @@ body {
   font-weight: bold;
   text-align: center;
 }
+
+.card {
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+.movie-desc h4 {
+  font-size: 20px;
+  line-height: 38px;
+  padding: 15px 60px 15px 0;
+}
+
+.movie-desc h1 {
+  font-size: 35px;
+}
+
+.movie-desc h2 {
+  font-family: Roboto, cursive;
+  color: red;
+  font-size: 20px;
+  padding-top: 10px;
+}

@@ -38,7 +38,9 @@ const CardSwiper = (props) => {
 						<div className={'genres'}>
 							{
 								list.map(el => (
-									<p>{genres[el]}</p>
+									<div key={el}>
+										<p>{genres[el]}</p>
+									</div>
 								))
 							}
 						</div>
